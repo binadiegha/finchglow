@@ -106,7 +106,7 @@ export function OTP({ separator, length, value, onChange }: OTPProps) {
   };
 
   const handleClick = (
-    event: React.MouseEvent<HTMLInputElement, MouseEvent>,
+    // event: React.MouseEvent<HTMLInputElement, MouseEvent>,
     currentIndex: number
   ) => {
     selectInput(currentIndex);
@@ -163,7 +163,7 @@ export function OTP({ separator, length, value, onChange }: OTPProps) {
                 },
                 onKeyDown: (event) => handleKeyDown(event, index),
                 onChange: (event) => handleChange(event, index),
-                onClick: (event) => handleClick(event, index),
+                onClick: () => handleClick(index),
                 onPaste: (event) => handlePaste(event, index),
                 value: value[index] ?? "",
               },
