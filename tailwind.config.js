@@ -7,6 +7,7 @@ export default {
         primary: "#0A335B",
         accent: "#ED3237",
         light: "#667085",
+        "dark-blue": "#101828",
       },
       backgroundImage: {
         "auth-background": "url('/src/assets/images/png/bg-pattern.png')",

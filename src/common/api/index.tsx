@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-export const pokemonApi = createApi({
-  reducerPath: "pokemonApi",
+export const finchGlowApi = createApi({
+  reducerPath: "finchGlowApi",
   // TODO: Convert base URL to .env value
   baseQuery: fetchBaseQuery({ baseUrl: "https://api.travelden.com/api" }),
   endpoints: (builder) => ({
@@ -34,3 +34,5 @@ export const pokemonApi = createApi({
     // profile
   }),
 });
+
+export const { useRegisterQuery, useLoginQuery, useVerifyQuery } = finchGlowApi;

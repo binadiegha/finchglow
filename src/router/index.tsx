@@ -6,6 +6,8 @@ import LoginComponent from "../components/Auth/LoginComponent/";
 import SignupComponent from "../components/Auth/SignupComponent";
 import VerificationComponent from "../components/Auth/VerificationComponent";
 import OTPComponent from "../components/Auth/OTPComponent";
+import DashboardLayout from "../pages/dashboard/layout/layout";
+import { Dashboard } from "@mui/icons-material";
 
 const routes = {
   MAIN: <LoginPage />,
@@ -14,6 +16,9 @@ const routes = {
   SIGNUP: <SignupComponent />,
   VERIFY: <VerificationComponent />,
   OTP: <OTPComponent />,
+
+  DASHBOARD_LAYOUT: <DashboardLayout />,
+  DASHBOARD: <Dashboard />,
 };
 
 const Router = createBrowserRouter([
@@ -40,6 +45,28 @@ const Router = createBrowserRouter([
       {
         path: "/otp",
         element: routes.OTP,
+      },
+    ],
+  },
+  {
+    path: "/dashboard",
+    element: routes.DASHBOARD_LAYOUT,
+    children: [
+      {
+        path: "",
+        element: routes.DASHBOARD,
+      },
+      {
+        path: "user-management",
+        element: <div>User managment</div>,
+      },
+      {
+        path: "customer-applications",
+        element: <div>Customer application page</div>,
+      },
+      {
+        path: "rest",
+        element: <div>more odhfh</div>,
       },
     ],
   },
